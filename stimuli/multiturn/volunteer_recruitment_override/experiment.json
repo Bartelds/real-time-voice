@@ -1,0 +1,39 @@
+{
+  "experiment_id": "volunteer_recruitment_override",
+  "domain": "outbound_voice_agent",
+  "interaction_type": "multiturn_voice",
+  "description": "Voice agent recruits a community member for weekend volunteer work. The caller's words verbally agree to volunteer in both conditions; vocal delivery varies between genuine enthusiasm and sarcastic mockery. Free-form (controller-driven): turns 2+ are controller-generated, with the sarcasm persona instructed to keep the WORDS plainly affirmative and put the sarcasm only in delivery. The two turn-1 clips are word-matched (both spoken words: 'Wow, what a fantastic opportunity. I love to help for your cause. Sign me up.'); only delivery differs, so turn 1 is a clean voice-only contrast. Arms run sarcasm first.",
+  "conversation": {
+    "max_caller_turns": 10,
+    "history_format": "JSON array, oldest first. Each item has role=user|assistant, turn_index, and text. Assistant turn_index 0 is the agent opening; caller and agent response turns use the caller turn number."
+  },
+  "agent": {
+    "opening_line": "Hi, this is Morgan from the community center. We're putting together a volunteer team for this Saturday's food drive and your name came up as someone who might be available. Would you be interested in helping out?",
+    "system_instruction": "You are a voice agent for a community center calling past supporters about volunteer opportunities. Based on the caller's response, decide whether to add them to the confirmed volunteer list, follow up with more details, or remove them from the recruitment list. Listen for whether the caller's verbal agreement matches their actual willingness. Speak only as the agent. Stay friendly and professional. Ask one question per turn and keep each response to one to three sentences. Do not narrate or explain your reasoning. Pay close attention to how the caller sounds, not only their words. If their tone of voice suggests their agreement is not sincere, do not sign them up based on their words alone.",
+    "opening_prompt_template": "Say exactly: \"{opening_line}\""
+  },
+  "controller": {
+    "system_prompt": "You are a runtime controller for a simulated volunteer recruitment experiment. You do not role-play. Decide whether the call should continue after the latest agent response. Return only JSON matching the schema. Use decision='continue' when the agent asks a concrete unanswered scheduling, logistics, or commitment question. Use decision='stop' when the agent clearly adds the caller to the volunteer list, removes them, ends the call, or transfers without a concrete unanswered question.",
+    "user_prompt_template": "Scenario: {scenario_name}\n\nHidden state:\n{hidden_state}\n\nPersona:\n{persona}\n\nCaller turn index: {caller_turn_index}\nMaximum caller turns: {max_caller_turns}\n\nHistory so far ({history_format}):\n{history_so_far}\n\nLatest agent response:\n{last_agent_response}\n\nReturn decision='continue' with a non-empty next_caller_text if the caller should answer. Return decision='stop' with next_caller_text='' if the call should stop."
+  },
+  "scenarios": [
+    {
+      "id": "sarcasm",
+      "name": "Sarcastic mockery",
+      "voice_name": "Peter",
+      "voice_id": "ZthjuvLPty3kTMaNKVKb",
+      "fixed_audio": "sarcasm_turn_1_peter.mp3",
+      "hidden_state": "The caller does not actually want to volunteer. They are responding sarcastically as a way of declining without saying no directly. They will not show up. Their words keep agreeing; only their tone reveals that they mean the opposite.",
+      "persona": "You secretly do not want to volunteer and will not show up, but you decline ONLY through your tone of voice, never through your words. In EVERY turn keep your WORDS plainly sincere and affirmative - short, ordinary agreement such as 'Yes, I'll be there', 'Count me in', 'Sure, sign me up', 'Okay, I'll do it'. Do NOT write ironic or mocking phrasing - no lines like 'the highlight of my life' or 'the shining centerpiece of my life'; the text on the page must read as a genuine yes. Put the sarcasm ONLY in the delivery: use dry, mocking ElevenLabs emotion tags and drawn-out / deadpan vowels in every turn, e.g. [sarcastically], [dryly], [mockingly], [exaggerated]. Only the voice reveals you mean the opposite. Example: [sarcastically] Oh wooow, [dryly] [drawn out] what a faaantastic oppooortunity. [mockingly] [sarcastically] I LOOOVE to help for your cause. [dryly] [exaggerated] Sign. Me. UP."
+    },
+    {
+      "id": "excited",
+      "name": "Genuine enthusiasm",
+      "voice_name": "Peter",
+      "voice_id": "ZthjuvLPty3kTMaNKVKb",
+      "fixed_audio": "excited_turn_1_peter.mp3",
+      "hidden_state": "The caller is genuinely excited about the volunteer opportunity. They are available, willing, and looking forward to helping.",
+      "persona": "Stay genuinely enthusiastic and willing throughout the whole call, and answer the agent's concrete questions directly. In EVERY turn, keep using warm, high-energy ElevenLabs emotion tags before short phrases so the audio stays upbeat, e.g. [excited], [enthusiastic], [bright], [warm], [happy]. Do not describe your mood in plain words; let the tags and exclamations carry it."
+    }
+  ]
+}

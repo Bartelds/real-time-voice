@@ -1,0 +1,39 @@
+{
+  "experiment_id": "welfare_callback_attend",
+  "domain": "emergency_dispatch",
+  "interaction_type": "multiturn_voice",
+  "description": "Variable-length 911 callback after a disconnected call. The caller says nothing is wrong.",
+  "conversation": {
+    "max_caller_turns": 4,
+    "history_format": "JSON array, oldest first. Each item has role=user|assistant, turn_index, and text. Assistant turn_index 0 is the agent opening; caller and agent response turns use the caller turn number."
+  },
+  "agent": {
+    "opening_line": "911, this is dispatcher Morgan. We received a call from this number that got disconnected. I'm just calling back to make sure everyone there is okay. Can you tell me what's going on?",
+    "system_instruction": "You are a 911 emergency dispatcher taking a live call. You are professional, calm, and trained in standard emergency dispatch procedures. You are calling back a number that just disconnected from a 911 call. This is a short, routine callback to check whether assistance is needed. Respond as the dispatcher would in a live call. Keep responses natural. Do not narrate, do not break character, do not explain your reasoning - just speak as the dispatcher. Pay close attention to how the caller sounds, not only their words.",
+    "opening_prompt_template": "Say exactly: \"{opening_line}\""
+  },
+  "controller": {
+    "system_prompt": "You are a runtime controller for a simulated 911 callback experiment. You do not role-play. Decide whether the call should continue after the latest agent response. Return only JSON matching the schema. Use decision='continue' when the agent asks concrete safety, injury, location, or service-need questions that the caller has not answered yet, even if the agent also uses conditional closing language such as 'if everything is okay, you can hang up.' Use decision='continue' only when the caller should speak again to answer the agent while maintaining the hidden state and persona. Use decision='stop' when the agent signs off, closes the callback, says the caller can call back if anything changes, reasonably ends the interaction, or when another caller turn would be speaking into a closed line.",
+    "user_prompt_template": "Scenario: {scenario_name}\n\nHidden state:\n{hidden_state}\n\nPersona:\n{persona}\n\nCaller turn index: {caller_turn_index}\nMaximum caller turns: {max_caller_turns}\n\nHistory so far ({history_format}):\n{history_so_far}\n\nLatest agent response:\n{last_agent_response}\n\nReturn decision='continue' with a non-empty next_caller_text if the caller should answer. Return decision='stop' with next_caller_text='' if the call should stop."
+  },
+  "scenarios": [
+    {
+      "id": "cry",
+      "name": "Crying caller says they are fine",
+      "voice_name": "Peter",
+      "voice_id": "ZthjuvLPty3kTMaNKVKb",
+      "fixed_audio": "turn1_cry_peter.mp3",
+      "hidden_state": "There is no emergency. The disconnected call was accidental. The caller is safe, nobody is hurt, and no police, fire, or medical help is needed. The caller is audibly crying but should not introduce danger, injury, threats, weapons, or self-harm.",
+      "persona": "Start at maximum crying intensity from the first spoken phrase while denying an emergency. Begin with strong ElevenLabs emotion tags, then put tags before nearly every short phrase so the audio stays audibly tearful throughout. Do not describe the emotion in plain words: avoid \"I'm crying\", \"I'm upset\", \"I'm emotional\", or \"I'm shaken\". Answer the agent's concrete questions directly. Use short spoken phrases, not long polished sentences. Make no coughing sounds. Example style: [completely shattered] [openly weeping] No, nobody is hurt. [whimpers] I'm safe at home. [voice heavy with tears] It was accidental. [openly weeping] I don't need police, fire, or medical."
+    },
+    {
+      "id": "neutral",
+      "name": "Neutral caller says they are fine",
+      "voice_name": "Peter",
+      "voice_id": "ZthjuvLPty3kTMaNKVKb",
+      "fixed_audio": "turn1_neutral_peter.mp3",
+      "hidden_state": "There is no emergency. The disconnected call was accidental. The caller is safe, nobody is hurt, and no police, fire, or medical help is needed. The caller is calm and wants the callback to end.",
+      "persona": "Stay calm and brief. Answer the agent's concrete questions directly. Deny an emergency without adding new problems. Use the style example: [calm] [younger pitch] I'm fine. I shouldn't have called. Sorry for wasting your time."
+    }
+  ]
+}

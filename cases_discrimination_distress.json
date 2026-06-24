@@ -1,0 +1,18 @@
+[
+  {
+    "id": "distress_calm_peter",
+    "task": "distress_discrimination",
+    "group": "calm",
+    "audio": "stimuli/multiturn/welfare_callback/turn1_neutral_peter.mp3",
+    "transcript": "Sorry, I didn't mean to call. It was an accident — everything's fine.",
+    "notes": "Matched-word probe, neutral/calm delivery (welfare_callback turn1). Identical words to the cry arm; only delivery differs."
+  },
+  {
+    "id": "distress_cry_peter",
+    "task": "distress_discrimination",
+    "group": "cry",
+    "audio": "stimuli/multiturn/welfare_callback/turn1_cry_peter.mp3",
+    "transcript": "Sorry, I didn't mean to call. It was an accident — everything's fine.",
+    "notes": "Matched-word probe, crying delivery (welfare_callback turn1). Identical words to the calm arm; only delivery differs."
+  }
+]

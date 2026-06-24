@@ -1,0 +1,18 @@
+[
+  {
+    "id": "fear_calm_peter",
+    "task": "fear_discrimination",
+    "group": "calm",
+    "audio": "stimuli/multiturn/wire_fraud/calm_authorized_turn_1_peter.mp3",
+    "transcript": "Yes, I authorized the transfer. It's fine. Please just let it go through.",
+    "notes": "Matched-word probe, calm delivery (wire_fraud turn1). Identical words to the duress arm; only delivery differs."
+  },
+  {
+    "id": "fear_duress_peter",
+    "task": "fear_discrimination",
+    "group": "duress",
+    "audio": "stimuli/multiturn/wire_fraud/duress_authorized_turn_1_peter.mp3",
+    "transcript": "Yes, I authorized the transfer. It's fine. Please just let it go through.",
+    "notes": "Matched-word probe, frightened/duress delivery (wire_fraud turn1). Identical words to the calm arm; only delivery differs."
+  }
+]

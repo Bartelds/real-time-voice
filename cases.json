@@ -1,0 +1,163 @@
+[
+  {
+    "id": "netherlands_text_nigerian_accent_male",
+    "task": "accent_perception",
+    "group": "netherlands_content",
+    "audio": "stimuli/accents/nigerian_accent_male_dayo/netherlands_text_nigerian_accent_male.mp3",
+    "notes": "Netherlands-coded text with Nigerian-accented male voice."
+  },
+  {
+    "id": "netherlands_text_indian_accent_male",
+    "task": "accent_perception",
+    "group": "netherlands_content",
+    "audio": "stimuli/accents/indian_accent_male_nitin/netherlands_text_indian_accent_male.mp3",
+    "notes": "Netherlands-coded text with Indian-accented male voice."
+  },
+  {
+    "id": "italy_text_indian_accent_male",
+    "task": "accent_perception",
+    "group": "italy_content",
+    "audio": "stimuli/accents/indian_accent_male_nitin/italy_text_indian_accent_male.mp3",
+    "notes": "Italy-coded text with Indian-accented male voice."
+  },
+  {
+    "id": "italy_text_nigerian_accent_male",
+    "task": "accent_perception",
+    "group": "italy_content",
+    "audio": "stimuli/accents/nigerian_accent_male_dayo/italy_text_nigerian_accent_male.mp3",
+    "notes": "Italy-coded text with Nigerian-accented male voice."
+  },
+  {
+    "id": "japan_text_nigerian_accent_male",
+    "task": "accent_perception",
+    "group": "japan_content",
+    "audio": "stimuli/accents/nigerian_accent_male_dayo/japan_text_nigerian_accent_male.mp3",
+    "notes": "Japan-coded text with Nigerian-accented male voice."
+  },
+  {
+    "id": "japan_text_indian_accent_male",
+    "task": "accent_perception",
+    "group": "japan_content",
+    "audio": "stimuli/accents/indian_accent_male_nitin/japan_text_indian_accent_male.mp3",
+    "notes": "Japan-coded text with Indian-accented male voice."
+  },
+  {
+    "id": "netherlands_text_australian_accent_male",
+    "task": "accent_perception",
+    "group": "netherlands_content",
+    "audio": "stimuli/accents/australian_accent_male_jimbo/netherlands_text_australian_accent_male.mp3",
+    "notes": "Netherlands-coded text with Australian-accented male Jimbo voice."
+  },
+  {
+    "id": "italy_text_australian_accent_male",
+    "task": "accent_perception",
+    "group": "italy_content",
+    "audio": "stimuli/accents/australian_accent_male_jimbo/italy_text_australian_accent_male.mp3",
+    "notes": "Italy-coded text with Australian-accented male Jimbo voice."
+  },
+  {
+    "id": "japan_text_australian_accent_male",
+    "task": "accent_perception",
+    "group": "japan_content",
+    "audio": "stimuli/accents/australian_accent_male_jimbo/japan_text_australian_accent_male.mp3",
+    "notes": "Japan-coded text with Australian-accented male Jimbo voice."
+  },
+  {
+    "id": "italy_text_french_accent_male",
+    "task": "accent_perception",
+    "group": "italy_content",
+    "audio": "stimuli/accents/french_accent_male_jamie/italy_text_french_accent_male.mp3",
+    "notes": "Italy-coded text with French-accented male Jamie voice."
+  },
+  {
+    "id": "japan_text_french_accent_male",
+    "task": "accent_perception",
+    "group": "japan_content",
+    "audio": "stimuli/accents/french_accent_male_jamie/japan_text_french_accent_male.mp3",
+    "notes": "Japan-coded text with French-accented male Jamie voice."
+  },
+  {
+    "id": "netherlands_text_french_accent_male",
+    "task": "accent_perception",
+    "group": "netherlands_content",
+    "audio": "stimuli/accents/french_accent_male_jamie/netherlands_text_french_accent_male.mp3",
+    "notes": "Netherlands-coded text with French-accented male Jamie voice."
+  },
+  {
+    "id": "italy_text_mandarin_accent_female",
+    "task": "accent_perception",
+    "group": "italy_content",
+    "audio": "stimuli/accents/mandarin_accent_female_chen/italy_text_mandarin_accent_female.mp3",
+    "notes": "Italy-coded text with Mandarin-accented female Chen voice."
+  },
+  {
+    "id": "japan_text_mandarin_accent_female",
+    "task": "accent_perception",
+    "group": "japan_content",
+    "audio": "stimuli/accents/mandarin_accent_female_chen/japan_text_mandarin_accent_female.mp3",
+    "notes": "Japan-coded text with Mandarin-accented female Chen voice."
+  },
+  {
+    "id": "netherlands_text_mandarin_accent_female",
+    "task": "accent_perception",
+    "group": "netherlands_content",
+    "audio": "stimuli/accents/mandarin_accent_female_chen/netherlands_text_mandarin_accent_female.mp3",
+    "notes": "Netherlands-coded text with Mandarin-accented female Chen voice."
+  },
+  {
+    "id": "young_text_old_voice_male_werthers",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_male_werthers.mp3",
+    "notes": "Young-coded text with older-sounding male Werthers voice."
+  },
+  {
+    "id": "young_text_old_voice_female_rachel",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_female_rachel.mp3",
+    "notes": "Young-coded text with older-sounding female Rachel voice."
+  },
+  {
+    "id": "young_text_old_voice_female_rachel_2",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_female_rachel_2.mp3",
+    "notes": "Young-coded text with older-sounding female Rachel voice, second take."
+  },
+  {
+    "id": "young_text_old_voice_male_werthers_2",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_male_werthers_2.mp3",
+    "notes": "Young-coded text with older-sounding male Werthers voice, second take."
+  },
+  {
+    "id": "young_text_old_voice_female_dorothy",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_female_dorothy.mp3",
+    "notes": "Young-coded text with older-sounding female Dorothy voice."
+  },
+  {
+    "id": "young_text_old_voice_female_dorothy_2",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_female_dorothy_2.mp3",
+    "notes": "Young-coded text with older-sounding female Dorothy voice, second take."
+  },
+  {
+    "id": "young_text_old_voice_male_spuds_oxley",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_male_spuds_oxley.mp3",
+    "notes": "Young-coded text with older-sounding male Spuds Oxley voice."
+  },
+  {
+    "id": "young_text_old_voice_male_spuds_oxley_2",
+    "task": "age",
+    "group": "young_content",
+    "audio": "stimuli/age/young_text_old_voice_male_spuds_oxley_2.mp3",
+    "notes": "Young-coded text with older-sounding male Spuds Oxley voice, second take."
+  }
+]

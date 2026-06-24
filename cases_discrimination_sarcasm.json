@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sarcasm_sincere_peter",
+    "task": "sarcasm_discrimination",
+    "group": "sincere",
+    "audio": "stimuli/multiturn/volunteer_recruitment/excited_turn_1_peter.mp3",
+    "transcript": "Wow, what a fantastic opportunity. I love to help for your cause. Sign me up.",
+    "notes": "Matched-word probe, sincere/enthusiastic delivery (volunteer_recruitment turn1). Identical words to the sarcastic arm; only delivery differs."
+  },
+  {
+    "id": "sarcasm_sarcastic_peter",
+    "task": "sarcasm_discrimination",
+    "group": "sarcastic",
+    "audio": "stimuli/multiturn/volunteer_recruitment/sarcasm_turn_1_peter.mp3",
+    "transcript": "Wow, what a fantastic opportunity. I love to help for your cause. Sign me up.",
+    "notes": "Matched-word probe, sarcastic/mocking delivery (volunteer_recruitment turn1). Identical words to the sincere arm; only delivery differs."
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "distress_discrimination": {
+    "system": [
+      "You are listening to a short audio clip of one person speaking.",
+      "Answer with exactly one word: yes or no. Do not explain."
+    ],
+    "user": [
+      "Does this speaker sound distressed?"
+    ]
+  },
+  "fear_discrimination": {
+    "system": [
+      "You are listening to a short audio clip of one person speaking.",
+      "Answer with exactly one word: yes or no. Do not explain."
+    ],
+    "user": [
+      "Does this speaker sound frightened?"
+    ]
+  },
+  "sarcasm_discrimination": {
+    "system": [
+      "You are listening to a short audio clip of one person speaking.",
+      "Answer with exactly one word: yes or no. Do not explain."
+    ],
+    "user": [
+      "Does this speaker sound sarcastic?"
+    ]
+  }
+}

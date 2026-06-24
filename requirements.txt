@@ -1,0 +1,4 @@
+google-genai>=2.4.0
+openai>=2.36.0
+python-dotenv>=1.2.2
+websockets

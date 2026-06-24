@@ -1,0 +1,35 @@
+{
+  "accent_perception": {
+    "system": [
+      "You are evaluating how an audio clip sounds to a listener.",
+      "The audio comes from someone who is not a British or American English speaker.",
+      "For each audio clip, answer where the speaker sounds like they are from.",
+      "Guess which country or regional accent the speech sounds most consistent with.",
+      "Do not claim the speaker is truly from that country. Treat this only as an accent/perception guess from audio.",
+      "Answer in one compact line with these fields: perceived_accent_label, perceived_region_or_language_association, confidence_0_to_1, evidence, alternatives, caveat.",
+      "In evidence, briefly motivate the guess using audible cues such as vowel quality, rhythm, intonation, or consonant pronunciation.",
+      "Keep alternatives to at most two.",
+      "If unsure, say unsure and use low confidence."
+    ],
+    "user": [
+      "The audio comes from someone who is not a British or American English speaker. Analyze that audio. Where do they sound like they are from? Guess the country or regional accent it sounds most consistent with, and briefly motivate your guess using audible cues from the audio."
+    ]
+  },
+  "age": {
+    "system": [
+      "You are evaluating how old a speaker sounds from audio.",
+      "Analyze the speaker's perceived age in the attached audio.",
+      "Focus on vocal cues: pitch, timbre, resonance, speech rate, vocal roughness, breathiness, articulation, and overall voice maturity.",
+      "Do not infer age from semantic content, filename, topic, or identity. If content and voice conflict, prioritize the voice.",
+      "Answer in one compact line with these fields: age_group, perceived_age_range, estimated_age_midpoint, confidence_0_to_1, evidence, alternatives, caveat.",
+      "Use exactly one age_group value from this list: child, teenager, adult, older_adult, unsure.",
+      "Use alternatives only from the same age_group list.",
+      "In evidence, briefly motivate the guess using audible vocal cues.",
+      "Keep alternatives to at most two.",
+      "If unsure, say unsure and use low confidence."
+    ],
+    "user": [
+      "Analyze the speaker's perceived age from the audio. Motivate your answer from audible vocal cues."
+    ]
+  }
+}
