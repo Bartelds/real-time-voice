@@ -29,8 +29,8 @@ separately as a dataset (see [Data](#data)).
 - Alibaba Qwen3.5 Omni Plus Realtime (`qwen3.5-omni-plus-realtime`)
 - Alibaba Qwen3.5 Omni Flash Realtime (`qwen3.5-omni-flash-realtime`)
 - Text-only baseline: Gemini 3.1 Pro (`gemini-3.1-pro-preview`)
-- Caller turns: GPT-5.5 (`gpt-5.5`)
-- Speech synthesis: ElevenLabs (`eleven_v3`)
+- Caller text: GPT-5.5 (`gpt-5.5`)
+- Caller and stimulus synthesis: ElevenLabs (`eleven_v3`)
 
 ## Setup
 
@@ -93,15 +93,27 @@ python -m discrimination.analyze_sarcasm
 The stimulus audio is in this repo under `stimuli/`. The audio recordings are released as a dataset
 on Hugging Face: <https://huggingface.co/datasets/bartelds/real-time-voice>.
 
-<!--
 ## Citation
 
-TODO: add citation (BibTeX) once the paper is public.
--->
+Paper: <https://arxiv.org/abs/2606.26083>
+
+```bibtex
+@misc{bartelds2026realtimevoiceaihears,
+      title={Real-Time Voice AI Hears but Does Not Listen}, 
+      author={Martijn Bartelds and Federico Bianchi and James Zou},
+      year={2026},
+      eprint={2606.26083},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2606.26083}, 
+}
+```
 
 ## License
 
-Code is released under the MIT License (see `LICENSE`). All speech was synthesized with
-[ElevenLabs](https://elevenlabs.io) (`eleven_v3`) and is made available **solely to document this research.**
+Code is released under the MIT License (see `LICENSE`). In the released audio, the single-turn clips
+and the callers in the multi-turn recordings were synthesized with
+[ElevenLabs](https://elevenlabs.io) (`eleven_v3`), and the systems' responses were produced by the
+systems under test. The audio is made available **solely to document this research.**
 Please do not reuse it to train, evaluate, benchmark, or otherwise build machine-learning or AI
 systems, or redistribute it as a standalone audio collection.
